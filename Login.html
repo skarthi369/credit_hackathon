@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Login Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --clr-blue: #3055fa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Nunito", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+      background: #151419;
+      overflow: hidden;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .card {
+      position: relative;
+      max-width: 30rem;
+      min-height: 25rem;
+      width: 100%;
+      background: radial-gradient(
+        ellipse at right top,
+        rgba(24, 95, 172, 0.56) 0%,
+        #151419 45%,
+        #151419 100%
+      );
+      border-radius: 2.25rem;
+      box-shadow: 1px 12px 25px rgba(0, 0, 0, 0.78);
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .card-header {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-body {
+      margin-top: 1rem;
+    }
+
+    .card-body form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .card-body input {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      border: none;
+      outline: none;
+    }
+
+    .card-body input:focus {
+      border: 2px solid var(--clr-blue);
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1.2rem;
+      background: var(--clr-blue);
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-login:hover {
+      background: #9013c1;
+    }
+
+    .btn-login:active {
+      background: #9013c1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Login Card -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Login</h2>
+    </div>
+    <div class="card-body">
+      <form>
+        <input type="text" placeholder="User ID" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="btn-login">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Particles.js Script -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 100, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 2 }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
